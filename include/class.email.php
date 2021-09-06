@@ -392,7 +392,7 @@ class Email extends VerySimpleModel {
                            'auth' => (bool) $vars['smtp_auth'],
                            'username' => $smtpcreds ? $vars['smtp_userid'] : $vars['userid'],
                            'password' => $smtpcreds ? $smtppasswd : $passwd,
-                           'timeout'  =>20,
+                           'timeout'  =>300,
                            'debug' => false,
                            ));
             $mail = $smtp->connect();
